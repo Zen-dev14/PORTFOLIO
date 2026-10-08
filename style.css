@@ -236,84 +236,159 @@ header {
  
 /* ===== PORTFOLIO WORKS ===== */
  
-.work-list {
-    display: flex;
-    flex-direction: column;
-    gap: 90px;
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
 }
  
-.work-item {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 50px;
-    align-items: start;
-    padding-top: 40px;
-    border-top: 1px solid #222;
+.work-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+ 
+.work-thumb {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 190px;
+    padding: 0;
+    border: 1px solid #222;
+    background: #0a0a0a;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s ease;
+}
+ 
+.work-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: .4s ease;
+}
+ 
+.work-thumb:hover {
+    border-color: #666;
+}
+ 
+.work-thumb:hover img {
+    transform: scale(1.04);
+    opacity: .5;
+}
+ 
+.view-hint {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: .3s ease;
+}
+ 
+.work-thumb:hover .view-hint {
+    opacity: 1;
 }
  
 .work-number {
     display: block;
     color: #444;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 3px;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 }
  
-.work-meta h3 {
-    font-size: 28px;
+.work-info h3 {
+    font-size: 20px;
     font-weight: 600;
-    letter-spacing: -1px;
+    letter-spacing: -.5px;
 }
  
-.work-meta p {
-    margin-top: 10px;
+.work-info p {
+    margin-top: 6px;
     color: #777;
-    font-size: 14px;
-    line-height: 1.7;
-}
- 
-.work-frame {
-    border: 1px solid #222;
-    background: #0a0a0a;
-    padding: 12px;
-    max-width: 760px;
-}
- 
-.work-frame img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
- 
-/* midterm photo is portrait, so keep it narrower */
-.work-frame-tall {
-    max-width: 480px;
+    font-size: 13px;
+    line-height: 1.6;
 }
  
 /* Quiz 1 - black box */
 .work-missing {
     background: #000;
-    min-height: 260px;
-    max-width: 760px;
+    cursor: default;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 8px;
+    padding: 20px;
     border-style: dashed;
+    border-color: #333;
+}
+ 
+.work-missing:hover {
     border-color: #333;
 }
  
 .work-missing p {
     color: #fff;
-    font-size: 22px;
+    font-size: 17px;
     font-weight: 500;
 }
  
 .work-missing span {
     color: #666;
-    font-size: 13px;
+    font-size: 12px;
+}
+ 
+/* Image viewer */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, .94);
+    display: none;
+    overflow-y: auto;
+    padding: 70px 20px 40px;
+    cursor: zoom-out;
+}
+ 
+.lightbox.open {
+    display: block;
+}
+ 
+.lightbox img {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    border: 1px solid #222;
+}
+ 
+.lightbox-close {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 42px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2001;
+}
+ 
+.lightbox-close:hover {
+    color: #999;
 }
  
  
@@ -375,18 +450,6 @@ footer p {
         font-size: 23px;
     }
  
-    .work-list {
-        gap: 60px;
-    }
- 
-    .work-item {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
- 
-    .work-frame-tall {
-        max-width: 100%;
-    }
  
     footer {
         padding: 40px 20px;
