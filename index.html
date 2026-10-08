@@ -6,9 +6,9 @@
     <title>John Rhayzen B. Manaor | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
+ 
 <body>
-
+ 
 <header>
     <nav class="navbar">
         <a href="#home" class="logo">ZEN.</a>
@@ -19,87 +19,87 @@
         </div>
     </nav>
 </header>
-
+ 
 <main>
-
+ 
 <section id="home" class="hero">
-
+ 
     <div class="hero-content">
         <p class="label">BSCS 3C · CAVITE STATE UNIVERSITY</p>
-
+ 
         <h1>John Rhayzen B. Manaor</h1>
-
+ 
         <p class="intro">
             A Computer Science student building knowledge,
             skills, and experience through continuous learning.
         </p>
-
+ 
         <a href="#portfolio" class="button">View My Portfolio</a>
     </div>
-
+ 
     <div class="cat">
         <img src="assets/black-cat.png" alt="Black cat">
     </div>
-
+ 
 </section>
-
-
+ 
+ 
 <section id="about" class="section about">
-
+ 
     <div class="section-header">
         <p class="label">02 — ABOUT ME</p>
         <h2>A little about me.</h2>
     </div>
-
+ 
     <div class="about-content">
-
+ 
         <div class="about-text">
             <p class="large-text">
                 I am a Bachelor of Science in Computer Science
                 student at Cavite State University – Silang Campus.
             </p>
-
+ 
             <p>
                 I am currently developing my knowledge and skills
                 in computer science through my studies and
                 academic projects.
             </p>
         </div>
-
+ 
         <div class="information">
-
+ 
             <div class="info-item">
                 <span>Name</span>
                 <strong>John Rhayzen B. Manaor</strong>
             </div>
-
+ 
             <div class="info-item">
                 <span>Nickname</span>
                 <strong>Zen</strong>
             </div>
-
+ 
             <div class="info-item">
                 <span>Program</span>
                 <strong>Bachelor of Science in Computer Science</strong>
             </div>
-
+ 
             <div class="info-item">
                 <span>Section</span>
                 <strong>BSCS 3C</strong>
             </div>
-
+ 
             <div class="info-item">
                 <span>School</span>
                 <strong>Cavite State University – Silang Campus</strong>
             </div>
-
+ 
         </div>
-
+ 
     </div>
-
+ 
     <div class="skills">
         <p class="label">SKILLS</p>
-
+ 
         <div class="skill-list">
             <span>Basic Programming</span>
             <span>Problem Solving</span>
@@ -107,92 +107,130 @@
             <span>Web Development</span>
         </div>
     </div>
-
+ 
 </section>
-
-
+ 
+ 
 <section id="portfolio" class="section portfolio">
-
+ 
     <div class="section-header">
         <p class="label">03 — PORTFOLIO</p>
         <h2>My work.</h2>
     </div>
-
-    <div class="work-list">
-
+ 
+    <div class="work-grid">
+ 
         <!-- QUIZ 1 -->
-        <article class="work-item">
-            <div class="work-meta">
-                <span class="work-number">01</span>
-                <h3>Quiz 1</h3>
-            </div>
-            <div class="work-frame work-missing">
+        <article class="work-card">
+            <div class="work-thumb work-missing">
                 <p>Failed to take this quiz.</p>
                 <span>I was not able to take Quiz 1.</span>
             </div>
+            <div class="work-info">
+                <span class="work-number">01</span>
+                <h3>Quiz 1</h3>
+            </div>
         </article>
-
+ 
         <!-- QUIZ 2 -->
-        <article class="work-item">
-            <div class="work-meta">
+        <article class="work-card">
+            <button class="work-thumb" data-full="assets/quiz2.png" aria-label="View Quiz 2">
+                <img src="assets/quiz2.png" alt="Quiz 2 attempt history - 18/20 (90%)">
+                <span class="view-hint">Click to view</span>
+            </button>
+            <div class="work-info">
                 <span class="work-number">02</span>
                 <h3>Quiz 2</h3>
-                <p>Requirements Analysis &amp; Unified Modeling Language</p>
-            </div>
-            <div class="work-frame">
-                <img src="assets/quiz2.png" alt="Quiz 2 attempt history - 18/20 (90%)">
+                <p>Requirements Analysis &amp; UML</p>
             </div>
         </article>
-
+ 
         <!-- QUIZ 3 -->
-        <article class="work-item">
-            <div class="work-meta">
+        <article class="work-card">
+            <button class="work-thumb" data-full="assets/quiz3.png" aria-label="View Quiz 3">
+                <img src="assets/quiz3.png" alt="Quiz 3 attempt history - 19/20 (95%)">
+                <span class="view-hint">Click to view</span>
+            </button>
+            <div class="work-info">
                 <span class="work-number">03</span>
                 <h3>Quiz 3</h3>
                 <p>The SOLID Principles</p>
             </div>
-            <div class="work-frame">
-                <img src="assets/quiz3.png" alt="Quiz 3 attempt history - 19/20 (95%)">
-            </div>
         </article>
-
+ 
         <!-- LONG QUIZ -->
-        <article class="work-item">
-            <div class="work-meta">
+        <article class="work-card">
+            <button class="work-thumb" data-full="assets/long-quiz.png" aria-label="View Long Quiz">
+                <img src="assets/long-quiz.png" alt="Long Quiz attempt history - 44/45 (98%)">
+                <span class="view-hint">Click to view</span>
+            </button>
+            <div class="work-info">
                 <span class="work-number">04</span>
                 <h3>Long Quiz</h3>
-                <p>Emerging Technologies, Requirements Analysis, SOLID Principles &amp; Design Patterns</p>
-            </div>
-            <div class="work-frame">
-                <img src="assets/long-quiz.png" alt="Long Quiz attempt history - 44/45 (98%)">
+                <p>Emerging Tech, Requirements, SOLID &amp; Design Patterns</p>
             </div>
         </article>
-
+ 
         <!-- MIDTERM EXAM -->
-        <article class="work-item">
-            <div class="work-meta">
+        <article class="work-card">
+            <button class="work-thumb" data-full="assets/midterm-exam.jpg" aria-label="View Midterm Exam">
+                <img src="assets/midterm-exam.jpg" alt="Midterm exam answer sheet">
+                <span class="view-hint">Click to view</span>
+            </button>
+            <div class="work-info">
                 <span class="work-number">05</span>
                 <h3>Midterm Exam</h3>
                 <p>DCIT 26 – Application Development and Emerging Technology</p>
             </div>
-            <div class="work-frame work-frame-tall">
-                <img src="assets/midterm-exam.jpg" alt="Midterm exam answer sheet">
-            </div>
         </article>
-
+ 
     </div>
-
+ 
 </section>
-
+ 
 </main>
-
+ 
 <footer>
     <div>
         <span class="logo">ZEN.</span>
     </div>
-
+ 
     <p>© 2026 John Rhayzen B. Manaor</p>
 </footer>
-
+ 
+<!-- IMAGE VIEWER -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="Full image">
+</div>
+ 
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+ 
+    document.querySelectorAll('.work-thumb[data-full]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            lightboxImg.src = btn.dataset.full;
+            lightbox.classList.add('open');
+            lightbox.scrollTop = 0;
+            document.body.style.overflow = 'hidden';
+        });
+    });
+ 
+    function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+ 
+    lightbox.addEventListener('click', e => {
+        if (e.target !== lightboxImg) closeLightbox();
+    });
+ 
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+</script>
+ 
 </body>
 </html>
+ 
